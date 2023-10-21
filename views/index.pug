@@ -2,4 +2,8 @@ extends layout
 
 block content
   h1= title
+  a(href='/new') Add a message
   p Welcome to #{title}
+
+  each message in messages
+    p #{message.user}: #{message.text}
